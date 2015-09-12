@@ -274,17 +274,19 @@ $(document ).ready(function(){
     }
 
     function extractSource(target) {
-        if(target.tagName == 'IMG') {
+        console.log(target.tagName);
+        console.log(target);
+        if(target.tagName.toLowerCase() == 'img') {
             return {
-                type: 'IMG',
+                type: 'img',
                 src: target.src
             };
         }
 
-        if(target.tagName == 'a') {
+        if(target.tagName.toLowerCase() == 'a') {
             return {
                 type: 'a',
-                src: target.href
+                src: target.href || 'http://google.com'
             }
         }
 
