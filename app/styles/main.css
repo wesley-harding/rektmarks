@@ -3,8 +3,10 @@ body {
 }
 
 #rektmarks_sidebar {
+  z-index: 100000;
   position: fixed;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   top: 0;
   left: 100%;
   width: 250px;
@@ -56,6 +58,15 @@ body {
   cursor: pointer;
 }
 
+#rektmarks_main_title {
+  padding: 0px;
+  margin: 0px;
+}
+
+#rektmarks_rekt_source {
+  font-size: 8pt;
+}
+
 .rektmarks_card {
   border: 1px solid #eee;
   border-radius: 5px;
@@ -64,12 +75,14 @@ body {
   box-shadow: 5px 5px 15px #ddd;
 }
 
-.rektmarks_card_title {
+.rektmarks_card_title, #rektmarks_new_copy {
   margin: 0;
 }
 
 .rektmarks_card_preview img, #rektmarks_new_src {
-  max-width: 220px; 
+  max-width: 100%; 
+  max-heigth: 150px;
+
 }
 
 .rektmarks_card_src {
@@ -85,4 +98,54 @@ body {
 
 .rektmarks_card_date {
   font-size: 7pt;
+}
+
+.rektmarks_card_delete {
+  font-size: 7pt;
+  color: #888;
+}
+.rektmarks_card_delete:hover {
+  color: #bbb;
+  
+}
+
+
+
+#rektmarks_new_card {
+  padding: 10px;
+}
+
+#rektmarks_new_title, #rektmarks_search  {
+  width: 100%;
+  margin: 10px 0;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  outline: none;
+}
+
+#rektmarks_new_description {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  outline: none;
+}
+
+#rektmarks_save{
+  width: 100%;
+  margin: 0 auto;
+  background-color: #333;
+  color: #fff;
+  border: 0;
+  padding: 5px 0;
+  outline: 0;
+}
+
+#rektmarks_save:hover {
+  background-color: #666;
+}
+
+#rektmarks_save:active {
+  background-color: #222;
 }
