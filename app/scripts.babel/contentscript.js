@@ -265,6 +265,8 @@ $(document ).ready(function(){
                         rektmarks_marks = cards;
                         clearCards( $cards );
                         injectCards( $cards );
+                    } else if(request.action == 'showSideBar'){
+                        showSidebar();
                     }
                 }
             );
